@@ -1,0 +1,20 @@
+body {
+    background-color: #fafafa;
+}
+.content-section {
+
+    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+.article-title, a:hover  {
+    font-family: sans-serif;
+    color: #428bca;
+    text-decoration: none;
+}

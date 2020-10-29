@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in posts %}
+
+        <article class="content-section border shadow">
+            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"/>
+            <div>
+                <a href="#" class="article-title">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <hr>
+            <div class="media">
+                <div class="media-body">
+                    <h2><a class="article-title" style="color: #428bca;" href="{% url 'post-detail' post.pk %}"> {{ post.title }} </a></h2>
+                   <p class='article-content'>{{ post.content }}</p>
+                </div>
+        </article>
+
+    {% endfor %}
+{% endblock content %}
